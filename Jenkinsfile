@@ -44,6 +44,7 @@ pipeline {
                 branch 'develop'
             }
             steps {
+                triggers{ ('H/1 * * * *') }
                 sh """
                 echo "Building Artifact"
                 """
