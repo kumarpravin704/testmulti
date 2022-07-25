@@ -1,10 +1,25 @@
 pipeline {
+
     agent any
+
     stages {
-        stage('test') {
-          steps {
-          script 
-            ( echo 'This is from test app' )}
+
+        stage('Test') {
+
+            steps {
+
+                script {
+
+                    echo 'this is for the testing purpose'
+
+                    echo 'testing completed'
+
                 }
+
             }
+
+        }
+
+    }
+
 }
