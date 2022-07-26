@@ -1,9 +1,9 @@
-Pipeline {
+pipeline {
 	agent any
     triggers {
         cron('* * * * *')
     }
-	Stages {
+	stages {
 		stage('build') {
 			steps {
 				
