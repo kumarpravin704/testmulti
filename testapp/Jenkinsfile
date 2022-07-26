@@ -1,4 +1,4 @@
-ipeline {
+Pipeline {
 	agent any
     triggers {
         cron('* * * * *')
@@ -8,16 +8,16 @@ ipeline {
 			steps {
 				script {
                     echo 'build the job'
-                    }  
-				}
+                }  
 			}
+		}
 		stage('script') {
 			steps {
 				script {
                     echo 'script triggered manually'
-                    }   
-				}
+                }   
 			}
+		}
 		stage('script') {
 		when {
             triggeredBy 'TimerTrigger'
@@ -25,9 +25,8 @@ ipeline {
 			steps {
 				script {
                     echo 'script triggered manually'
-                    }  
-				}
+                }  
 			}
-        }
-    } 
-          		
+		}
+    }
+}
