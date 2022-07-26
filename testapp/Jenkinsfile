@@ -6,16 +6,16 @@ Pipeline {
 	Stages {
 		stage('build') {
 			steps {
-				script {
+				
                     echo 'build the job'
-                }  
+                
 			}
 		}
 		stage('script') {
 			steps {
-				script {
+				
                     echo 'script triggered manually'
-                }   
+                  
 			}
 		}
 		stage('script') {
@@ -23,9 +23,9 @@ Pipeline {
             triggeredBy 'TimerTrigger'
             } 
 			steps {
-				script {
+				
                     echo 'script triggered manually'
-                }  
+                
 			}
 		}
     }
