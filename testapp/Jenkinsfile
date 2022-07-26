@@ -1,3 +1,4 @@
+
 Pipeline {
 	agent any
     triggers {
@@ -6,19 +7,25 @@ Pipeline {
 	Stages {
 		stage('build') {
 			steps {
-				sh 'build the job' 
+				script {
+                    echo 'build the job'
+                    }  
 				}
 			}
 		stage('script') {
 			steps {
-				sh 'running due to manual ' 
+				script {
+                    echo 'script triggered manually'
+                    }   
 				}
 			}
 		stage('script') {
 		when {
             triggeredBy 'TimerTrigger'
 			steps {
-				sh 'running through the timertrigger' 
+				script {
+                    echo 'script triggered manually'
+                    }  
 				}
 			}
         }
