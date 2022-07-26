@@ -24,7 +24,7 @@ pipeline {
             } 
 			steps {
 				
-                    echo 'script triggered manually'
+                    echo 'Timmer triggered the script'
                 
 			}
 		}
