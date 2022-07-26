@@ -5,6 +5,9 @@ pipeline {
     } */
 	stages {
 		stage('build') {
+			when {
+            triggeredBy 'User'
+            } 
 			steps {
 				
                     echo 'build the job'
@@ -12,6 +15,9 @@ pipeline {
 			}
 		}
 		stage('script') {
+			when {
+            triggeredBy 'User'
+            } 
 			steps {
 				
                     echo 'script triggered manually'
