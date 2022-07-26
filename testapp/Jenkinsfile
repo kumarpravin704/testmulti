@@ -1,21 +1,24 @@
 Pipeline {
 	agent any
+    triggers {
+        cron('* * * * *')
+    }
 	Stages {
 		stage('build') {
 			steps {
-				sh   'build the job' 
+				sh 'build the job' 
 				}
 			}
 		stage('script') {
 			steps {
-				sh   'running due to manual ' 
+				sh 'running due to manual ' 
 				}
 			}
 		stage('script') {
 		when {
             triggeredBy 'TimerTrigger'
 			steps {
-				sh   'running through the timertrigger' 
+				sh 'running through the timertrigger' 
 				}
 			}
         }
