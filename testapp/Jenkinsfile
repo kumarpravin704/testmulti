@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('build') {
 			when {
-            triggeredBy 'User'
+            triggeredBy 'user'
             } 
 			steps {
 				
@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage('script') {
 			when {
-            triggeredBy 'User'
+            triggeredBy 'user'
             } 
 			steps {
 				
