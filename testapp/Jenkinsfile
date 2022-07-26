@@ -1,25 +1,23 @@
-pipeline {
-
-    agent any
-
-    stages {
-
-        stage('Test') {
-
-            steps {
-
-                script {
-
-                    echo 'this is for the testing purpose'
-
-                    echo 'testing completed'
-
-                }
-
-            }
-
+Pipeline {
+	agent any
+	Stages {
+		stage('build') {
+			steps {
+				sh   'build the job' 
+				}
+			}
+		stage('script') {
+			steps {
+				sh   'running due to manual ' 
+				}
+			}
+		stage('script') {
+		when {
+            triggeredBy 'TimerTrigger'
+			steps {
+				sh   'running through the timertrigger' 
+				}
+			}
         }
-
-    }
-
-}
+    } 
+}          		
