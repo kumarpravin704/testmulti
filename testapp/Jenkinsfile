@@ -1,5 +1,4 @@
-
-Pipeline {
+ipeline {
 	agent any
     triggers {
         cron('* * * * *')
@@ -22,6 +21,7 @@ Pipeline {
 		stage('script') {
 		when {
             triggeredBy 'TimerTrigger'
+            } 
 			steps {
 				script {
                     echo 'script triggered manually'
